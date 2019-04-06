@@ -1,0 +1,25 @@
+{
+  "name": "post-client",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development nodemon src/index.js --exec babel-node --presets babel-preset-env",
+    "start": "NODE_ENV=production nodemon src/index.js --exec babel-node --presets babel-preset-env",
+    "forever": "NODE_ENV=production forever start --minUptime 1000 --spinSleepTime 1000 -c \"nodemon  --exec babel-node --presets babel-preset-env\" ./src/index.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "forever": "^1.0.0",
+    "mongoose": "^5.4.22",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "nodemon": "^1.18.10"
+  }
+}
