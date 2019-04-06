@@ -11,7 +11,6 @@ const app = express();
 app.use(cors());
 
 app.use("/", express.static(path.join(__dirname, "../")));
-app.use("/post", express.static(path.join(__dirname, "../../post/dist/")));
 
 /* MONGODB CONNECTION */
 const db = mongoose.connection;
